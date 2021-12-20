@@ -38,7 +38,9 @@ let FetchContent = async (tab) => {
 
   await tab.waitForSelector(contentSelector[0]);
   await tab.click(contentSelector[0]);
+  await tab.screenshot({path:'name.png',type:"jpeg"});
   await tab.click(contentSelector[1]);
+  await tab.screenshot({path:'history.png',type:"jpeg"});
 };
 
 main();
